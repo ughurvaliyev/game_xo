@@ -1,0 +1,66 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(0deg, rgba(195,74,34,1) 0%, rgba(45,175,253,1) 100%);
+}
+
+.container {
+  text-align: center;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin: 20px auto;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border: 1px solid #ccc;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.cell.winner {
+  background-color: lightgreen;
+}
+
+#status {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+#scoreboard {
+  margin-top: 20px;
+}
+
+#scoreboard table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+#scoreboard th, #scoreboard td {
+  border: 2px solid #000000;
+  padding: 10px;
+  font-size: 1em;
+}
+
+#reset {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  background-color: rgb(187, 203, 65);
+}
